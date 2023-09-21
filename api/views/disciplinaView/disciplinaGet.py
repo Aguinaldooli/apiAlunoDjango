@@ -5,10 +5,10 @@ from api.models import DisciplinaModel
 from api.serializers.disciplinaSerializer import DisciplinaSerializer  
 
 class DisciplinaDetail(APIView):
-    def get(self, request, id):
+    def get(self, request, pk):
         try:
             # Tenta obter um objeto DisciplinaModel com base no ID fornecido
-            disciplina = DisciplinaModel.objects.get(pk=id)    
+            disciplina = DisciplinaModel.objects.get(pk=pk)    
             # Cria um objeto de serializador DisciplinaSerializer com base no objeto disciplina
             serializer = DisciplinaSerializer(disciplina)     
             # Retorna uma resposta com os dados serializados da disciplina com código 200 (OK)

@@ -5,10 +5,22 @@ from api.models import DisciplinaModel
 from api.serializers.disciplinaSerializer import DisciplinaSerializer  # Importa o serializador DisciplinaSerializer
 
 class DisciplinaDelete(APIView):
-    def delete(self, request, id):
+    def get(self, request, pk):
         try:
             # Tenta obter um objeto DisciplinaModel com base no ID fornecido
-            disciplina = DisciplinaModel.objects.get(pk=id)  
+            disciplina = DisciplinaModel.objects.get(pk=pk)    
+            # Cria um objeto de serializador DisciplinaSerializer com base no objeto disciplina
+            serializer = DisciplinaSerializer(disciplina)     
+            # Retorna uma resposta com os dados serializados da disciplina com código 200 (OK)
+            return Response(serializer.data, status=status.HTTP_200_OK) 
+        # Captura a exceção caso a disciplina não seja encontrada
+        except DisciplinaModel.DoesNotExist:
+            return Response({"message": "Disciplina não encontrada"}, status=status.HTTP_404_NOT_FOUND)
+        
+    def delete(self, request, pk):
+        try:
+            # Tenta obter um objeto DisciplinaModel com base no ID fornecido
+            disciplina = DisciplinaModel.objects.get(pk=pk)  
             # Deleta a disciplina do banco de dados
             disciplina.delete()  
             # Retorna uma resposta de sucesso com código 204 (No Content)
