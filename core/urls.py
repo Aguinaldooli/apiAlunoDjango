@@ -31,6 +31,6 @@ urlpatterns = [
     path('tarefa/create/', TarefaCreate.as_view()),
     path('tarefas/', TarefaList.as_view()),
     path('tarefas/<int:id>', TarefaDetail.as_view()),
-    path('tarefas/<int:id>', TarefaUpdate.as_view()),
+    path('tarefas/<int:id>/put', TarefaUpdate.as_view()),
     path('tarefas/<int:pk>/delete/', TarefaDelete.as_view()),
 ]
