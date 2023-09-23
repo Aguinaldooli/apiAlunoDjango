@@ -2,8 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from api.models import DisciplinaModel
-from api.serializers.disciplinaSerializer import DisciplinaSerializer  # Importa o serializador DisciplinaSerializer
-
+from api.serializers.disciplinaSerializer import DisciplinaSerializer 
 class DisciplinaCreate(APIView):
     def post(self, request):
         # Cria um objeto de serializador DisciplinaSerializer com base nos dados da solicitação
