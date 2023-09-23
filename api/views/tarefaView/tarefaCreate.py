@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from api.models import TarefaModel
-from api.serializers.tarefaSerializer import TarefaSerializer  # Importa o serializador TarefaSerializer
+from api.serializers.tarefaSerializer import TarefaSerializer  
 
 class TarefaCreate(APIView):
     def post(self, request):

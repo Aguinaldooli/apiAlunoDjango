@@ -1,0 +1,30 @@
+# Arquivos de compilação e bytecode Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Arquivos de configuração do sistema
+*.bak
+Thumbs.db
+.DS_Store
+
+# Arquivos gerados pelo Django
+db.sqlite3
+__init__.py
+
+# Arquivos de log
+*.log
+
+# Diretório de mídia
+media/
+
+# Diretório de ambiente virtual (se você usar um)
+venv/
+
+# Arquivos de configuração pessoal (exemplo: .env)
+.env
+
+# Dependências geradas pelo pip (geralmente em 'requirements.txt')
+*.egg-info/
+requirements.txt
