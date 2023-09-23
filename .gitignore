@@ -27,4 +27,3 @@ venv/
 
 # Dependências geradas pelo pip (geralmente em 'requirements.txt')
 *.egg-info/
-requirements.txt
