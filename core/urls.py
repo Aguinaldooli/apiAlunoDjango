@@ -28,9 +28,9 @@ urlpatterns = [
     path('disciplinas/<int:pk>', DisciplinaDetail.as_view()),
     path('disciplinas/<int:id>/update/', DisciplinaUpdate.as_view()),
     path('disciplinas/<int:pk>/delete/', DisciplinaDelete.as_view()),
-    path('tarefa/create/', TarefaCreate.as_view()),
+    path('tarefas/create/', TarefaCreate.as_view()),
     path('tarefas/', TarefaList.as_view()),
     path('tarefas/<int:id>', TarefaDetail.as_view()),
-    path('tarefas/<int:id>/put', TarefaUpdate.as_view()),
+    path('tarefas/<int:id>/update/', TarefaUpdate.as_view()),
     path('tarefas/<int:pk>/delete/', TarefaDelete.as_view()),
 ]

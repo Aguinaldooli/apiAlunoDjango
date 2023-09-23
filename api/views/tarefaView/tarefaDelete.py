@@ -4,10 +4,10 @@ from rest_framework import status
 from api.models import TarefaModel
 
 class TarefaDelete(APIView):
-    def delete(self, request, id):
+    def delete(self, request, pk):
         try:
             # Tenta obter um objeto TarefaModel com base no ID fornecido
-            tarefa = TarefaModel.objects.get(pk=id)    
+            tarefa = TarefaModel.objects.get(pk=pk)    
             # Deleta a tarefa do banco de dados
             tarefa.delete() 
             # Retorna uma resposta de sucesso com código 204 (No Content)
