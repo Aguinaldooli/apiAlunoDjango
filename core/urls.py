@@ -21,7 +21,7 @@ urlpatterns = [
     path('alunos/', AlunoList.as_view()),
     path('alunos/create/', AlunoCreate.as_view()),
     path('alunos/<int:id>', AlunoDetail.as_view()),
-    path('alunos/<int:id>', AlunoUpdate.as_view()),
+    path('alunos/<int:id>/update/', AlunoUpdate.as_view()),
     path('alunos/<int:pk>/delete/', AlunoDelete.as_view()),
     path('disciplinas/', DisciplinaCreate.as_view()),
     path('disciplinas/list', DisciplinaList.as_view()),
